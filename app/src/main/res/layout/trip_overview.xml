@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/TripOverviewPage">
+
+    <!-- BUS IMAGE -->
+    <ImageView
+        android:id="@+id/trip_bus_image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:elevation="11dp"
+        android:layout_marginTop="-45dp"
+        app:srcCompat="@drawable/bus_image" />
+
+    <!-- WHITE BACKGROUND -->
+    <TextView
+        android:id="@+id/trip_whiteheader"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:elevation="10dp"
+        android:background="@drawable/trip_whitebackground" />
+
+    <!-- BLUE CONTAINER -->
+
+    <!-- TRIP OVERVIEW TEXT -->
+    <TextView
+        android:id="@+id/trip_bluebackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/trip_gradient_background2" />
+
+    <TextView
+        android:id="@+id/tripOverviewText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:text="T R I P   O V E R V I E W"
+        android:textSize="27dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="#F5F5F5"
+        android:fontFamily="@font/barlow_semi_condensed_medium"
+        android:elevation="10dp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginTop="265dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+
+    <!-- PASSENGER COUNT CONTAINER -->
+    <LinearLayout
+        android:layout_width="145dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/trip_overview_container"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/availSeatCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/availableSeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available Seats"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="145dp"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/trip_overview_container">
+
+        <!-- CURRENT DESTINATION CONTAINER -->
+        <TextView
+            android:id="@+id/passengerCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/passenger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Passengers Count"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+</LinearLayout>
+
+    <!-- CURRENT DESTINATION TAB -->
+    <TextView
+        android:id="@+id/destinationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="355dp"
+        android:layout_centerHorizontal="true"
+        android:text="Current Destination"
+        android:textColor="#F5F5F5"
+        android:elevation="30dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/barlow_semi_condensed_medium"/>
+
+    <TextView
+        android:id="@+id/currentDestination"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginTop="390dp"
+        android:background="@drawable/trip_currentdestination_container"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:elevation="30dp"
+        android:textSize="15dp"
+        android:textColor="#183B4E"
+        android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/arrowNext"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="390dp"
+            android:layout_marginLeft="290dp"
+            android:layout_marginRight="30dp"
+            android:background="#E1EBEE"
+            app:srcCompat="@drawable/trip_arrow_next"
+            android:elevation="30dp"
+            android:focusable="false"
+            android:clickable="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="455dp">
+
+    <!-- USED TO MAKE TWO TEXTVIEW SIDE BY SIDE -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- PENDING DESTINATIONS -->
+        <TextView
+            android:id="@+id/pendingDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="10dp"
+            android:text="Pending Destinations"
+            android:textColor="#F5F5F5"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/barlow_semi_condensed_medium"/>
+    </LinearLayout>
+
+
+        <!-- SCROLLABLE TO SEE THE OTHER PENDING DESTINATIONS -->
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/trip_destination_scrollview_container">
+
+            <LinearLayout
+                android:id="@+id/pendingDestinationsContainerLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+            <!-- <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:background="@drawable/trip_destination_container">
+
+                <TextView
+                    android:id="@+id/destination1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="#F5F5F5" />
+
+                <TextView
+                    android:id="@+id/passengerCount1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Passengers"
+                    android:textColor="#F5F5F5"/>
+
+                <TextView
+                    android:id="@+id/place1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:text="Luzon Ave."
+                    android:textStyle="bold"
+                    android:textColor="#183B4E"/>
+            </LinearLayout>
+            -->
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:elevation="11dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingRight="30dp">
+
+            <ImageView
+                android:id="@+id/settingsIcon"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="Settings"
+                android:layout_width="5dp"
+                android:layout_height="45dp"
+                android:paddingLeft="20dp"
+                android:layout_marginEnd="110dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/settings_image">
+            </ImageView>
+
+            <Button
+                android:id="@+id/addPassengerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#183B4E"
+                android:padding="12dp"
+                android:text="+ ADD PASSENGER"
+                android:textSize="12dp"
+                android:textStyle="bold">
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

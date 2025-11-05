@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/pendingDestinationLinearLayoutContent"
+        android:layout_width="150dp"
+        android:layout_height="135dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/trip_destination_container"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/passengerCountItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#F5F5F5" />
+
+        <TextView
+            android:id="@+id/passengerItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Passengers"
+            android:textColor="#F5F5F5" />
+
+        <TextView
+            android:id="@+id/placeItem"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#183B4E" />
+    </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPassenger"
+    android:id="@+id/AddPassengerPage">
+
+    <TextView
+        android:id="@+id/blueBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"/>
+
+    <TextView
+        android:id="@+id/whiteBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="130dp"
+        android:elevation="10dp"
+        android:background="@drawable/sqaure_shape"/>
+
+    <!-- PICKUP LOCATION ICON-->
+    <TextView
+        android:id="@+id/pickupLocationIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/pickup_location"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginLeft="25dp"
+        android:elevation="10dp"/>
+
+    <!-- DROP OFF DESTINATION ICON-->
+    <TextView
+        android:id="@+id/dropoffDestinationIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/pickup_location"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginLeft="25dp"
+        android:elevation="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="160dp"
+        android:paddingLeft="75dp"
+        android:paddingRight="30dp"
+        android:elevation="10dp">
+
+    <!-- DROPDOWN LIST FOR PICK UP LOCATION-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
+
+        <AutoCompleteTextView
+            android:id="@+id/pickup_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:textSize="14dp"
+            android:hint="Pick-up Location"
+            android:textColor="#000000"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- DROPDOWN LIST FOR DROP OFF DESTINATION -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
+
+        <AutoCompleteTextView
+            android:id="@+id/dropoff_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:textSize="14dp"
+            android:hint="Drop-off Destination"
+            android:textColor="#000000"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/PassengerType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:layout_marginLeft="30dp"
+        android:text="Type of Passenger"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#183B4E"
+        android:elevation="10dp"
+        android:fontFamily="@font/barlow_semi_condensed_medium"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:elevation="10dp">
+
+    <!-- REGULAR PASSENGER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="305dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/passenger_container">
+
+        <TextView
+            android:id="@+id/adultPassenger"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ADULT"
+            android:textSize="14dp"
+            android:textColor="#343434"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/adultPlusButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="+"
+            android:textSize="15dp"
+            android:backgroundTint="#0083B0"/>
+
+        <TextView
+            android:id="@+id/adultCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="0"
+            android:textColor="#343434"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/adultMinusButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="-"
+            android:textSize="15dp"
+            android:backgroundTint="#0083B0"/>
+    </LinearLayout>
+
+        <!-- STUDENT PASSENGER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/passenger_container">
+
+            <TextView
+                android:id="@+id/ChildPassenger"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CHILD"
+                android:textColor="#343434"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/childPlusButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:text="+"
+                android:textSize="15dp"
+                android:backgroundTint="#0083B0"/>
+
+            <TextView
+                android:id="@+id/childCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="0"
+                android:textColor="#343434"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/childMinusButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:text="-"
+                android:textSize="15dp"
+                android:backgroundTint="#0083B0"/>
+        </LinearLayout>
+
+        <!-- PWD PASSENGER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/passenger_container">
+
+            <TextView
+                android:id="@+id/StudentPassenger"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="STUDENT"
+                android:textColor="#343434"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/syidentPlusButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:text="+"
+                android:textSize="15dp"
+                android:backgroundTint="#0083B0"/>
+
+            <TextView
+                android:id="@+id/studentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="0"
+                android:textColor="#343434"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/studentMinusButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:text="-"
+                android:textSize="15dp"
+                android:backgroundTint="#0083B0"/>
+        </LinearLayout>
+
+        <!-- SENIOR PASSENGER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/passenger_container">
+
+            <TextView
+                android:id="@+id/seniorpwdPassenger"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SENIOR/PWD"
+                android:textColor="#343434"
+                android:textSize="14dp"
+                android:paddingLeft="5dp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/seniorpwdPlusButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:text="+"
+                android:textSize="15dp"
+                android:backgroundTint="#0083B0"/>
+
+            <TextView
+                android:id="@+id/seniorpwdCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="0"
+                android:textColor="#343434"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/seniorMinusButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:text="-"
+                android:textSize="15dp"
+                android:backgroundTint="#0083B0" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Amount: 0"
+            android:textStyle="bold"
+            android:layout_marginTop="-5dp"
+            android:textColor="#183B4E"
+            android:fontFamily="@font/barlow_semi_condensed_medium"/>
+
+        <!-- CANCEL AND CONFIRM BUTTON-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:text="CANCEL"
+                android:textSize="15dp"
+                android:backgroundTint="#982B1C"
+                android:textStyle="bold"
+                android:layout_marginEnd="20dp"/>
+
+            <Button
+                android:id="@+id/confirmButton"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#0A6847"
+                android:text="CONFIRM"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
